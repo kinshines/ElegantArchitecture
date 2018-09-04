@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElegantArchitecture.Web.Components
 {
-    public class Menu : ViewComponent
+    public class ThemePanel : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
