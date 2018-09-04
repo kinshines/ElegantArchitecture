@@ -5,14 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ElegantArchitecture.Web.Models;
+using ElegantArchitecture.Infrastructure.Services;
 
 namespace ElegantArchitecture.Web.Controllers
 {
     public class HomeController : Controller
     {
+        DashboardService _dashboardService;
+        public HomeController(DashboardService dashboardService)
+        {
+            _dashboardService = dashboardService;
+        }
         public IActionResult Index()
         {
-            return View();
+            var model = _dashboardService.GetSummary();
+            return View(model);
         }
 
         public IActionResult About()

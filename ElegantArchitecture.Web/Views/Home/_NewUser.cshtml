@@ -1,0 +1,27 @@
+﻿@model DashboardSummary
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="dashboard-stat2 bordered">
+        <div class="display">
+            <div class="number">
+                <h3 class="font-purple-soft">
+                    <span data-counter="counterup" data-value="@Model.User">0</span>
+                </h3>
+                <small>NEW USERS</small>
+            </div>
+            <div class="icon">
+                <i class="icon-user"></i>
+            </div>
+        </div>
+        <div class="progress-info">
+            <div class="progress">
+                <span style="width: @Model.UserChange%;" class="progress-bar progress-bar-success purple-soft">
+                    <span class="sr-only">@Model.UserChange% change</span>
+                </span>
+            </div>
+            <div class="status">
+                <div class="status-title"> change </div>
+                <div class="status-number"> @Model.UserChange% </div>
+            </div>
+        </div>
+    </div>
+</div>
