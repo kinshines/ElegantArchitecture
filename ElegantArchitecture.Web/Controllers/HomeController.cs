@@ -21,7 +21,11 @@ namespace ElegantArchitecture.Web.Controllers
             var model = _dashboardService.GetSummary();
             return View(model);
         }
-
+        public IActionResult Dashboard2()
+        {
+            var model = _dashboardService.GetSummary();
+            return View(model);
+        }
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
