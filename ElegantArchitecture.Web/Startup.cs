@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using ElegantArchitecture.Infrastructure.Data;
 using ElegantArchitecture.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
@@ -33,10 +34,11 @@ namespace ElegantArchitecture.Web
             services.AddScoped<DashboardService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IMapper autoMapper)
         {
             if (env.IsDevelopment())
             {
@@ -58,6 +60,8 @@ namespace ElegantArchitecture.Web
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            autoMapper.ConfigurationProvider.AssertConfigurationIsValid();
         }
     }
 }
