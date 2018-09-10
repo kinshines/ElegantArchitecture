@@ -16,6 +16,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Home\Dashboard3.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Home\_Weekly.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Home\_Biggest.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Home\_Monthly.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Home\_NewFeedback2.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
