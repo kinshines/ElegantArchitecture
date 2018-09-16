@@ -19,6 +19,12 @@
     <Content Update="Views\Home\Dashboard3.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Update="Views\Home\_AmChart2.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Home\_AmChart3.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Home\_Weekly.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
