@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NLog.Web;
 
 namespace ElegantArchitecture.Web
 {
@@ -16,27 +17,46 @@ namespace ElegantArchitecture.Web
     {
         public static void Main(string[] args)
         {
-            var host = CreateWebHostBuilder(args).Build();
-            using (var scope = host.Services.CreateScope())
+            var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+            try
             {
-                var services = scope.ServiceProvider;
+                logger.Debug("init main");
+                var host = CreateWebHostBuilder(args).Build();
+                using (var scope = host.Services.CreateScope())
+                {
+                    var services = scope.ServiceProvider;
 
-                try
-                {
-                    // Requires using RazorPagesMovie.Models;
-                    SeedData.Initialize(services);
+                    try
+                    {
+                        // Requires using RazorPagesMovie.Models;
+                        SeedData.Initialize(services);
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.Error(ex, "An error occurred seeding the DB.");
+                    }
                 }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred seeding the DB.");
-                }
+                host.Run();
             }
-            host.Run();
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Stopped program because of exception");
+                throw;
+            }
+            finally
+            {
+                NLog.LogManager.Shutdown();
+            }
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .ConfigureLogging(logging =>
+                {
+                    logging.ClearProviders();
+                    logging.SetMinimumLevel(LogLevel.Trace);
+                })
+                .UseNLog();
     }
 }
