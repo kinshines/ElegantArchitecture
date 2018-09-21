@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elegant.Web", "ElegantArchitecture.Web\Elegant.Web.csproj", "{0C7BDE37-AE2B-4383-AE27-CCB40BF2A55D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elegant.Web", "Elegant.Web\Elegant.Web.csproj", "{0C7BDE37-AE2B-4383-AE27-CCB40BF2A55D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elegant.Core", "ElegantArchitecture.Core\Elegant.Core.csproj", "{E2C31D1B-BA27-4819-9E0D-C63221E3B17F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elegant.Core", "Elegant.Core\Elegant.Core.csproj", "{E2C31D1B-BA27-4819-9E0D-C63221E3B17F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elegant.Infrastructure", "ElegantArchitecture.Infrastructure\Elegant.Infrastructure.csproj", "{1DD63E68-F5F5-47AF-A894-46AFFF25AC93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elegant.Infrastructure", "Elegant.Infrastructure\Elegant.Infrastructure.csproj", "{1DD63E68-F5F5-47AF-A894-46AFFF25AC93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
