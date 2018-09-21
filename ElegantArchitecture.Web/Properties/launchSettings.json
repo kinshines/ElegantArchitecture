@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iis": {
-      "applicationUrl": "http://localhost/ElegantArchitecture.Web",
+      "applicationUrl": "http://localhost/Elegant.Web",
       "sslPort": 0
     },
     "iisExpress": {
@@ -19,7 +19,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ElegantArchitecture.Web": {
+    "Elegant.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

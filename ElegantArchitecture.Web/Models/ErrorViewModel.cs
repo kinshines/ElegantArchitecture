@@ -1,6 +1,6 @@
 using System;
 
-namespace ElegantArchitecture.Web.Models
+namespace Elegant.Web.Models
 {
     public class ErrorViewModel
     {

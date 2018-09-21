@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ElegantArchitecture.Core\ElegantArchitecture.Core.csproj" />
-    <ProjectReference Include="..\ElegantArchitecture.Infrastructure\ElegantArchitecture.Infrastructure.csproj" />
+    <ProjectReference Include="..\ElegantArchitecture.Core\Elegant.Core.csproj" />
+    <ProjectReference Include="..\ElegantArchitecture.Infrastructure\Elegant.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

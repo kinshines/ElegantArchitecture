@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ElegantArchitecture.Web.Components
+namespace Elegant.Web.Components
 {
     public class ThemePanel : ViewComponent
     {

@@ -1,10 +1,10 @@
-﻿using ElegantArchitecture.Core.Entities;
+﻿using Elegant.Core.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ElegantArchitecture.Infrastructure.Data
+namespace Elegant.Infrastructure.Data
 {
     public static class SeedData
     {

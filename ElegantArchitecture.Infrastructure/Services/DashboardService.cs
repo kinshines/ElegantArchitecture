@@ -1,11 +1,11 @@
-﻿using ElegantArchitecture.Core.Entities;
-using ElegantArchitecture.Infrastructure.Data;
+﻿using Elegant.Core.Entities;
+using Elegant.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ElegantArchitecture.Infrastructure.Services
+namespace Elegant.Infrastructure.Services
 {
     public class DashboardService
     {

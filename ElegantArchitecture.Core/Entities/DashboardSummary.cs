@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ElegantArchitecture.Core.Entities
+namespace Elegant.Core.Entities
 {
     public class DashboardSummary
     {

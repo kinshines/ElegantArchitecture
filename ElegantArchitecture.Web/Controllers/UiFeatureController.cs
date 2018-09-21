@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ElegantArchitecture.Web.Controllers
+namespace Elegant.Web.Controllers
 {
     public class UiFeatureController : Controller
     {

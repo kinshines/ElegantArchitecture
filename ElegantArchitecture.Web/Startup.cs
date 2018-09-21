@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using ElegantArchitecture.Infrastructure.Data;
-using ElegantArchitecture.Infrastructure.Services;
+using Elegant.Infrastructure.Data;
+using Elegant.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,7 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ElegantArchitecture.Web
+namespace Elegant.Web
 {
     public class Startup
     {
