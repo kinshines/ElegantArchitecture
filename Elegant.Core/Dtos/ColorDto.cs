@@ -48,6 +48,13 @@ namespace Elegant.Core.Dtos
                 return "border-" + ColorEng;
             }
         }
+        public string BtnColor
+        {
+            get
+            {
+                return "c-btn-" + ColorEng;
+            }
+        }
         public string FontBackgroundColor
         {
             get
