@@ -12,5 +12,10 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult ColorLibrary()
+        {
+            return View();
+        }
     }
 }
