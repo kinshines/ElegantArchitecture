@@ -1,0 +1,128 @@
+﻿@model ColorDto
+<div class="col-md-2 col-sm-2 col-xs-6">
+    <div class="color-demo tooltips" data-original-title="Click to view demos for this color" data-toggle="modal" data-target="@Model.ModalIdAnchor">
+        <div class="color-view @Model.BackgroundColor @Model.FontBackgroundColor bold uppercase"> @Model.ColorNumber </div>
+        <div class="color-info bg-white c-font-14 sbold"> blue-madison </div>
+    </div>
+    <div class="modal fade" id="@Model.ModalId">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content c-square">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title bold uppercase @Model.FontColor">@Model.ColorEng</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="tabbable-line">
+                        <ul class="nav nav-tabs uppercase bold">
+                            <li class="active">
+                                <a href="@Model.Tab1IdAnchor" data-toggle="tab">Typography</a>
+                            </li>
+                            <li>
+                                <a href="@Model.Tab2IdAnchor" data-toggle="tab">Background & Border</a>
+                            </li>
+                            <li>
+                                <a href="@Model.Tab3IdAnchor" data-toggle="tab">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="@Model.Tab4IdAnchor" data-toggle="tab">Components</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="@Model.Tab1Id">
+                                <h4>Text font</h4>
+                                <div style="margin: 10px 0 30px 0">
+                                    <span class="@Model.FontColor font-lg">Some sample text goes here...</span>
+                                    <br>
+                                    <span class="@Model.FontColor font-lg sbold">Some sample text goes here...</span>
+                                    <br>
+                                    <span class="@Model.FontColor font-lg bold uppercase">Some sample text goes here...</span>
+                                </div>
+                                <h4>Background matching text font</h4>
+                                <div style="margin: 10px 0 30px 0; padding: 10px" class="bg-blue-madison">
+                                    <span class="@Model.FontBackgroundColor font-lg">Some sample text goes here...</span>
+                                    <br>
+                                    <span class="@Model.FontBackgroundColor font-lg sbold">Some sample text goes here...</span>
+                                    <br>
+                                    <span class="@Model.FontBackgroundColor font-lg bold uppercase">Some sample text goes here...</span>
+                                </div>
+                                <h4>Icon font</h4>
+                                <div style="margin: 10px 0 30px 0">
+                                    <i class="@Model.FontColor font-lg icon-user"></i>&nbsp;
+                                    <i class="@Model.FontColor font-lg icon-settings"></i>&nbsp;
+                                    <i class="@Model.FontColor font-lg icon-calendar"></i>
+                                    <br>
+                                    <i class="@Model.FontColor font-lg fa fa-bar-chart-o"></i>&nbsp;
+                                    <i class="@Model.FontColor font-lg fa fa-code-fork icon-settings"></i>&nbsp;
+                                    <i class="@Model.FontColor font-lg fa fa-cogs"></i>
+                                    <br>
+                                    <i class="@Model.FontColor font-lg glyphicon glyphicon-star-empty"></i>&nbsp;
+                                    <i class="@Model.FontColor font-lg glyphicon glyphicon-leaf"></i>&nbsp;
+                                    <i class="@Model.FontColor font-lg glyphicon glyphicon-warning-sign"></i>
+                                    <br>
+                                </div>
+                                <h4>Background matching icon font</h4>
+                                <div style="margin: 10px 0 30px 0; padding: 10px" class="@Model.BackgroundColor">
+                                    <i class="@Model.FontBackgroundColor font-lg icon-user"></i>&nbsp;
+                                    <i class="@Model.FontBackgroundColor font-lg icon-settings"></i>&nbsp;
+                                    <i class="@Model.FontBackgroundColor font-lg icon-calendar"></i>
+                                    <br>
+                                    <i class="@Model.FontBackgroundColor font-lg fa fa-bar-chart-o"></i>&nbsp;
+                                    <i class="@Model.FontBackgroundColor font-lg fa fa-code-fork icon-settings"></i>&nbsp;
+                                    <i class="@Model.FontBackgroundColor font-lg fa fa-cogs"></i>
+                                    <br>
+                                    <i class="@Model.FontBackgroundColor font-lg glyphicon glyphicon-star-empty"></i>&nbsp;
+                                    <i class="@Model.FontBackgroundColor font-lg glyphicon glyphicon-leaf"></i>&nbsp;
+                                    <i class="@Model.FontBackgroundColor font-lg glyphicon glyphicon-warning-sign"></i>
+                                    <br>
+                                </div>
+                                <h4>Class usage</h4> <code>class="@Model.FontColor"</code>
+                            </div>
+                            <div class="tab-pane" id="@Model.Tab2Id">
+                                <div style="margin: 30px 0;">
+                                    <div class="@Model.BorderColor margin-bottom-10" style="padding: 10px; border: 2px solid #fff;"> Box with custom border color </div> <code>class="@Model.BorderColor"</code>
+                                </div>
+                                <div style="margin: 30px 0;">
+                                    <div class="@Model.BackgroundColor @Model.FontBackgroundColor margin-bottom-10" style="padding: 10px; "> Box with custom background color </div> <code>class="@Model.BackgroundColor @Model.FontBackgroundColor"</code>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="@Model.Tab3Id">
+                                <div style="margin: 10px 0 30px 0">
+                                    <a href="#" class="btn uppercase @Model.ColorEng">Button</a> &nbsp; <code>class="btn @Model.ColorEng"</code>
+                                </div>
+                                <div style="margin: 10px 0 30px 0">
+                                    <a href="#" class="btn sbold uppercase btn-outline @Model.ColorEng">Button</a> &nbsp; <code>class="c-btn-border-1x @Model.BtnColor"</code>
+                                </div>
+                                <div style="margin: 10px 0 30px 0">
+                                    <a href="#" class="btn sbold uppercase btn-circle @Model.ColorEng">Button</a> &nbsp; <code>class="btn btn-circle @Model.ColorEng"</code>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="@Model.Tab4Id">
+                                <div style="margin: 10px 0 30px 0">
+                                    <h4>Statistic Widgets</h4>
+                                    <div class="dashboard-stat @Model.ColorEng">
+                                        <div class="visual">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </div>
+                                        <div class="details">
+                                            <div class="number"> 12,5M$ </div>
+                                            <div class="desc"> Total Profit </div>
+                                        </div>
+                                        <a class="more" href="javascript:;">
+                                            View more
+                                            <i class="m-icon-swapright m-icon-white"></i>
+                                        </a>
+                                    </div> <code>class="dashboard-stat @Model.ColorEng"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline dark sbold uppercase" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
