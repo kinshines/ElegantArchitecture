@@ -31,6 +31,7 @@ namespace Elegant.Web
             services.AddDbContext<ElegantContext>(options =>
                 options.UseInMemoryDatabase("Elegant"));
 
+            //todo add auto service
             services.AddScoped<DashboardService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
