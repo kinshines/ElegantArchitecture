@@ -22,5 +22,10 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult SocialIcons()
+        {
+            return View();
+        }
     }
 }
