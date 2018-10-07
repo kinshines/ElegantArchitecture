@@ -50,6 +50,9 @@
     <Content Update="Views\Home\_TotalProfit2.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Update="Views\UiFeature\Typography.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="wwwroot\global\plugins\bootstrap\css\bootstrap.min.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
