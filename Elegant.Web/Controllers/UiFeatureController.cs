@@ -32,5 +32,10 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Confirmations()
+        {
+            return View();
+        }
     }
 }
