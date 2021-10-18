@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Elegant.Infrastructure.Data;
-using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NLog.Web;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Elegant.Web
 {
@@ -21,26 +18,11 @@ namespace Elegant.Web
             try
             {
                 logger.Debug("init main");
-                var host = CreateWebHostBuilder(args).Build();
-                using (var scope = host.Services.CreateScope())
-                {
-                    var services = scope.ServiceProvider;
-
-                    try
-                    {
-                        // Requires using RazorPagesMovie.Models;
-                        SeedData.Initialize(services);
-                    }
-                    catch (Exception ex)
-                    {
-                        logger.Error(ex, "An error occurred seeding the DB.");
-                    }
-                }
-                host.Run();
+                CreateHostBuilder(args).Build().Run();
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                logger.Error(ex, "Stopped program because of exception");
+                logger.Error(exception, "Stopped program because of exception");
                 throw;
             }
             finally
@@ -49,9 +31,12 @@ namespace Elegant.Web
             }
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                })
                 .ConfigureLogging(logging =>
                 {
                     logging.ClearProviders();

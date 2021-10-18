@@ -17,6 +17,7 @@ namespace Elegant.Infrastructure.Services
 
         public DashboardSummary GetSummary()
         {
+            return new DashboardSummary();
             return context.DashboardSummary.FirstOrDefault();
         }
     }
