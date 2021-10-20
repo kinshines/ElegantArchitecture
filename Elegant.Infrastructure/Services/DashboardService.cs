@@ -17,8 +17,19 @@ namespace Elegant.Infrastructure.Services
 
         public DashboardSummary GetSummary()
         {
-            return new DashboardSummary();
-            return context.DashboardSummary.FirstOrDefault();
+            var summary = new DashboardSummary()
+            {
+                Profit = 7800,
+                ProfitProgress = 76,
+                Feedback=1349,
+                FeedbackChange=85,
+                Order=567,
+                OrderGrow=45,
+                User=276,
+                UserChange=57,
+            };            
+            return summary;
+            //return context.DashboardSummary.FirstOrDefault();
         }
     }
 }
