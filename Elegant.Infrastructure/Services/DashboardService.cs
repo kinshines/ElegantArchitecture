@@ -23,10 +23,15 @@ namespace Elegant.Infrastructure.Services
                 ProfitProgress = 76,
                 Feedback=1349,
                 FeedbackChange=85,
-                Order=567,
+                Order=549,
                 OrderGrow=45,
                 User=276,
                 UserChange=57,
+                Popularity=89,
+                Balance=7644,
+                Weekly=1293,
+                Biggest=815,
+                Monthly=5071
             };            
             return summary;
             //return context.DashboardSummary.FirstOrDefault();

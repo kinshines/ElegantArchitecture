@@ -18,7 +18,7 @@
 <!-- BEGIN PAGE BREADCRUMB -->
 <ul class="page-breadcrumb breadcrumb">
     <li>
-        <a href="index.html">Home</a>
+        <a asp-action="Index">Home</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
@@ -27,11 +27,8 @@
 </ul>
 <!-- END PAGE BREADCRUMB -->
 <!-- BEGIN PAGE BASE CONTENT -->
-<div class="row">
-    <partial name="_Banlance" model="Model" />
-    <partial name="_Weekly" model="Model" />
-    <partial name="_Biggest" model="Model" />
-    <partial name="_Monthly" model="Model" />
+<div class="row widget-row">
+    <partial name="_Landscape3" model="Model" />
 </div>
 <div class="row">
     <partial name="_AmChart3" />
