@@ -47,5 +47,10 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult SweetAlert()
+        {
+            return View();
+        }
     }
 }
