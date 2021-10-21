@@ -33,8 +33,34 @@
 <div class="row">
     <partial name="_AmChart3" />
 </div>
+<div class="row">
+    <partial name="_Comments" />
+</div>
+<div class="row">
+    <partial name="_Activities" />
+</div>
+<div class="row">
+    <partial name="_RecentActivities" />
+</div>
+<div class="row">
+    <partial name="_GeneralStats" />
+</div>
+<div class="row">
+    <partial name="_RegionalStats" />
+</div>
+<div class="row">
+    <partial name="_RecentUser" />
+</div>
 @section scripts{
     <partial name="_AmchartScriptsPartial" />
     <partial name="_FlotScriptsPartial" />
     <partial name="_VmapScriptsPartial" />
+    <script src="~/pages/scripts/dashboard.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $('#clickmewow').click(function () {
+                $('#radio1003').attr('checked', 'checked');
+            });
+        })
+    </script>
 }
