@@ -18,6 +18,16 @@ namespace Elegant.Web.Controllers
             return View();
         }
 
+        public IActionResult GeneralComponent()
+        {
+            return View();
+        }
+
+        public IActionResult Button()
+        {
+            return View();
+        }
+
         public IActionResult SpinnerButton()
         {
             return View();
