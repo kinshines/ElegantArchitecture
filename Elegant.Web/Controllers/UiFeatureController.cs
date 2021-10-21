@@ -8,7 +8,7 @@ namespace Elegant.Web.Controllers
 {
     public class UiFeatureController : Controller
     {
-        public IActionResult GridSystem()
+        public IActionResult MetronicGrid()
         {
             return View();
         }
