@@ -52,5 +52,10 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult FontIcon()
+        {
+            return View();
+        }
     }
 }
