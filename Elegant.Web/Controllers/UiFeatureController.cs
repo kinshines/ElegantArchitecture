@@ -82,5 +82,20 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Progress1()
+        {
+            return View();
+        }
+
+        public IActionResult Progress2()
+        {
+            return View();
+        }
+
+        public IActionResult BlockUI()
+        {
+            return View();
+        }
     }
 }
