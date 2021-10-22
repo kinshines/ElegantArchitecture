@@ -21,14 +21,7 @@
         <link href="~/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <link href="~/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" />
-        <link href="~/global/plugins/morris/morris.css" rel="stylesheet" />
-        <link href="~/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" />
-        <link href="~/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" />
-        <link href="~/global/plugins/ladda/ladda-themeless.min.css" rel="stylesheet" />
-        <link href="~/global/plugins/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
-        <link href="~/global/plugins/jstree/dist/themes/default/style.min.css" rel="stylesheet" type="text/css" />
-
+        @RenderSection("links", required: false)
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="~/global/css/components-rounded.min.css" rel="stylesheet" id="style_components" type="text/css" />

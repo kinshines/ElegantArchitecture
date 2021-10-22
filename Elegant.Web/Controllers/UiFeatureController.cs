@@ -97,5 +97,15 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Growl()
+        {
+            return View();
+        }
+
+        public IActionResult Notific8()
+        {
+            return View();
+        }
     }
 }
