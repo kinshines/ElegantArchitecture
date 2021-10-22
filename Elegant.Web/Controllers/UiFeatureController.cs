@@ -57,5 +57,30 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult TabAccordion()
+        {
+            return View();
+        }
+
+        public IActionResult Timeline()
+        {
+            return View();
+        }
+
+        public IActionResult Timeline2()
+        {
+            return View();
+        }
+
+        public IActionResult HorizontalTimeline()
+        {
+            return View();
+        }
+
+        public IActionResult Tree()
+        {
+            return View();
+        }
     }
 }
