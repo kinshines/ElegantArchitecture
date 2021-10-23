@@ -72,5 +72,29 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+        public IActionResult ContextMenu()
+        {
+            return View();
+        }
+        public IActionResult Editor()
+        {
+            return View();
+        }
+        public IActionResult CodeEditor()
+        {
+            return View();
+        }
+        public IActionResult IonSlider()
+        {
+            return View();
+        }
+        public IActionResult NoUISlider()
+        {
+            return View();
+        }
+        public IActionResult KnobCircle()
+        {
+            return View();
+        }
     }
 }

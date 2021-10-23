@@ -1,0 +1,166 @@
+﻿
+@{
+    ViewData["Title"] = "Code Editors";
+}
+
+@section links{
+    <link href="~/global/plugins/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
+    <link href="~/global/plugins/codemirror/theme/neat.css" rel="stylesheet" type="text/css" />
+    <link href="~/global/plugins/codemirror/theme/ambiance.css" rel="stylesheet" type="text/css" />
+    <link href="~/global/plugins/codemirror/theme/material.css" rel="stylesheet" type="text/css" />
+    <link href="~/global/plugins/codemirror/theme/neo.css" rel="stylesheet" type="text/css" />
+}
+
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            Code Editors
+            <small> text editor implemented in javaScript for the browser</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="index.html">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">Components</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="note note-success">
+            <h4 class="block">CodeMirror</h4>
+            <p>
+                CodeMirror is a versatile text editor implemented in JavaScript for the browser. It is specialized for editing code, and comes with a number of language modes and addons that implement more advanced editing functionality.
+                For more info please check out
+                <a href="http://codemirror.net/" target="_blank"> the official documentation</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-dark"></i>
+                    <span class="caption-subject font-dark bold uppercase">Demo 1</span>
+                    <span class="caption-helper">javascript syntax</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <textarea id="code_editor_demo_1"> var handleDemo1 = function () { var myTextArea = document.getElementById('code_editor_demo_1'); var myCodeMirror = CodeMirror.fromTextArea(myTextArea, { lineNumbers: true, matchBrackets: true, styleActiveLine: true,
+                                        theme:"ambiance" } );} </textarea>
+            </div>
+        </div>
+        <!-- END PORTLET-->
+        <!-- BEGIN PORTLET-->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">Demo 1</span>
+                    <span class="caption-helper">javascript syntax readonly</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <textarea id="code_editor_demo_3"> var handleDemo1 = function () { var myTextArea = document.getElementById('code_editor_demo_1'); var myCodeMirror = CodeMirror.fromTextArea(myTextArea, { lineNumbers: true, matchBrackets: true, styleActiveLine: true,
+                                        theme:"ambiance" } );} </textarea>
+            </div>
+        </div>
+        <!-- END PORTLET-->
+    </div>
+    <div class="col-md-6">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-red"></i>
+                    <span class="caption-subject font-red bold uppercase">Demo 2</span>
+                    <span class="caption-helper">css syntax</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <textarea id="code_editor_demo_2"> code { border: 1px solid #e1e1e1; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); } </textarea>
+            </div>
+        </div>
+        <!-- END PORTLET-->
+        <!-- BEGIN PORTLET-->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-purple"></i>
+                    <span class="caption-subject font-purple bold uppercase">Demo 4</span>
+                    <span class="caption-helper">css syntax readonly</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <textarea id="code_editor_demo_4"> .progress { border: 0; background-image: none; filter: none; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; } </textarea>
+            </div>
+        </div>
+        <!-- END PORTLET-->
+    </div>
+</div>
+<!-- END PAGE BASE CONTENT -->
+
+@section scripts{
+    <script src="~/global/plugins/codemirror/lib/codemirror.js" type="text/javascript"></script>
+    <script src="~/global/plugins/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="~/global/plugins/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="~/global/plugins/codemirror/mode/css/css.js" type="text/javascript"></script>
+    <script src="~/pages/scripts/components-code-editors.min.js" type="text/javascript"></script>
+}
