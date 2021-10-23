@@ -46,5 +46,31 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Tag()
+        {
+            return View();
+        }
+
+        public IActionResult Switch()
+        {
+            return View();
+        }
+        public IActionResult Maxlength()
+        {
+            return View();
+        }
+        public IActionResult FileInput()
+        {
+            return View();
+        }
+        public IActionResult Touchspin()
+        {
+            return View();
+        }
+        public IActionResult FormTool()
+        {
+            return View();
+        }
     }
 }
