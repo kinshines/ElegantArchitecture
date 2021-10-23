@@ -107,5 +107,49 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Toastr()
+        {
+            return View();
+        }
+        public IActionResult Bootbox()
+        {
+            return View();
+        }
+        public IActionResult Alert()
+        {
+            return View();
+        }
+        public IActionResult SessionTimeout()
+        {
+            return View();
+        }
+        public IActionResult IdleTimeout()
+        {
+            return View();
+        }
+
+        public IActionResult Modal()
+        {
+            return View();
+        }
+
+        public IActionResult ExtendModal()
+        {
+            return View();
+        }
+        public IActionResult Tile()
+        {
+            return View();
+        }
+        public IActionResult DatePaginator()
+        {
+            return View();
+        }
+
+        public IActionResult NestableList()
+        {
+            return View();
+        }
     }
 }
