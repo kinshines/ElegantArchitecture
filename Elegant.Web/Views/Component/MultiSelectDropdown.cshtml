@@ -1,0 +1,607 @@
+﻿
+@{
+    ViewData["Title"] = "Bootstrap Multiselect Dropdowns";
+}
+
+@section links{
+    <link href="~/global/plugins/bootstrap-multiselect/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+}
+
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            Bootstrap Multiselect Dropdowns
+            <small>Select multiple options within a Bootstrap dropdown</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="index.html">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">Components</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<div class="m-heading-1 border-green m-bordered">
+    <h3>Bootstrap Multiselect Dropdown</h3>
+    <p>
+        Add the class <code>mt-multiselect</code> into each <code>select</code> element to initialize the dropdown.
+        <br> For more info please check out
+        <a href="http://davidstutz.github.io/bootstrap-multiselect/" target="_blank">the official documentation</a>.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="portlet box green">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i>Basic Dropdowns
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="javascript:;" class="reload"> </a>
+                    <a href="javascript:;" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <h4>Basic multiselect</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Pre-select</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-width="100%">
+                    <option value="1">Option 1</option>
+                    <option value="2" selected="selected">Option 2</option>
+                    <!-- Option 3 will be selected in advance ... -->
+                    <option value="3" selected="selected">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
+                <h4>No icon</h4>
+                <select class="mt-multiselect btn btn-default mt-noicon" multiple="multiple" data-clickable-groups="true" data-collapse-groups="true" data-width="100%">
+                    <optgroup label="Group 1" class="group-1">
+                        <option value="1-1">Option 1.1</option>
+                        <option value="1-2" selected="selected">Option 1.2</option>
+                        <option value="1-3" selected="selected">Option 1.3</option>
+                    </optgroup>
+                    <optgroup label="Group 2" class="group-2">
+                        <option value="2-1">Option 2.1</option>
+                        <option value="2-2">Option 2.2</option>
+                        <option value="2-3">Option 2.3</option>
+                    </optgroup>
+                </select>
+                <h4>Dropdown with Filter</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true">
+                    <option value="1">Option 1</option>
+                    <option value="2" selected="selected">Option 2</option>
+                    <!-- Option 3 will be selected in advance ... -->
+                    <option value="3" selected="selected">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="portlet box green">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i>Grouped Dropdowns
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="javascript:;" class="reload"> </a>
+                    <a href="javascript:;" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <h4>Grouped Single Select</h4>
+                <select class="mt-multiselect btn btn-default" data-width="100%">
+                    <optgroup label="Group 1">
+                        <option value="1-1">Option 1.1</option>
+                        <option value="1-2" selected="selected">Option 1.2</option>
+                        <option value="1-3" selected="selected">Option 1.3</option>
+                    </optgroup>
+                    <optgroup label="Group 2">
+                        <option value="2-1">Option 2.1</option>
+                        <option value="2-2">Option 2.2</option>
+                        <option value="2-3">Option 2.3</option>
+                    </optgroup>
+                </select>
+                <h4>Grouped Multi Select</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-width="100%">
+                    <optgroup label="Group 1" class="group-1">
+                        <option value="1-1">Option 1.1</option>
+                        <option value="1-2" selected="selected">Option 1.2</option>
+                        <option value="1-3" selected="selected">Option 1.3</option>
+                    </optgroup>
+                    <optgroup label="Group 2" class="group-2">
+                        <option value="2-1">Option 2.1</option>
+                        <option value="2-2">Option 2.2</option>
+                        <option value="2-3">Option 2.3</option>
+                    </optgroup>
+                </select>
+                <h4>Clickable Grouped Multi Select</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-clickable-groups="true" data-width="100%">
+                    <optgroup label="Group 1" class="group-1">
+                        <option value="1-1">Option 1.1</option>
+                        <option value="1-2" selected="selected">Option 1.2</option>
+                        <option value="1-3" selected="selected">Option 1.3</option>
+                    </optgroup>
+                    <optgroup label="Group 2" class="group-2">
+                        <option value="2-1">Option 2.1</option>
+                        <option value="2-2">Option 2.2</option>
+                        <option value="2-3">Option 2.3</option>
+                    </optgroup>
+                </select>
+                <h4>Collapsible Grouped Multi Select</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-clickable-groups="true" data-collapse-groups="true" data-width="100%">
+                    <optgroup label="Group 1" class="group-1">
+                        <option value="1-1">Option 1.1</option>
+                        <option value="1-2" selected="selected">Option 1.2</option>
+                        <option value="1-3" selected="selected">Option 1.3</option>
+                    </optgroup>
+                    <optgroup label="Group 2" class="group-2">
+                        <option value="2-1">Option 2.1</option>
+                        <option value="2-2">Option 2.2</option>
+                        <option value="2-3">Option 2.3</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class='col-md-6'>
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i>Resizing Dropdowns
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="javascript:;" class="reload"> </a>
+                    <a href="javascript:;" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <h4>Align Dropdown to Right</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-drop-right="true" data-label="left" data-width="100%">
+                    <option value="1">Option 1</option>
+                    <option value="2" selected="selected">Option 2</option>
+                    <!-- Option 3 will be selected in advance ... -->
+                    <option value="3" selected="selected">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
+                <h4>Fixed Width Dropdown</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="300" data-filter="true">
+                    <optgroup label="Group 1" class="group-1">
+                        <option value="1-1">Option 1.1</option>
+                        <option value="1-2" selected="selected">Option 1.2</option>
+                        <option value="1-3" selected="selected">Option 1.3</option>
+                    </optgroup>
+                    <optgroup label="Group 2" class="group-2">
+                        <option value="2-1">Option 2.1</option>
+                        <option value="2-2">Option 2.2</option>
+                        <option value="2-3">Option 2.3</option>
+                    </optgroup>
+                    <optgroup label="Group 3" class="group-3">
+                        <option value="2-1">Option 3.1</option>
+                        <option value="2-2">Option 3.2</option>
+                        <option value="2-3">Option 3.3</option>
+                    </optgroup>
+                </select>
+                <h4>Auto Width Dropdown</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-filter="true">
+                    <optgroup label="Group 1" class="group-1">
+                        <option value="1-1">Option 1.1</option>
+                        <option value="1-2" selected="selected">Option 1.2</option>
+                        <option value="1-3" selected="selected">Option 1.3</option>
+                    </optgroup>
+                    <optgroup label="Group 2" class="group-2">
+                        <option value="2-1">Option 2.1</option>
+                        <option value="2-2">Option 2.2</option>
+                        <option value="2-3">Option 2.3</option>
+                    </optgroup>
+                    <optgroup label="Group 3" class="group-3">
+                        <option value="2-1">Option 3.1</option>
+                        <option value="2-2">Option 3.2</option>
+                        <option value="2-3">Option 3.3</option>
+                    </optgroup>
+                </select>
+                <h4>Fixed Height Dropdown</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+                    <optgroup label="Group 1" class="group-1">
+                        <option value="1-1">Option 1.1</option>
+                        <option value="1-2" selected="selected">Option 1.2</option>
+                        <option value="1-3" selected="selected">Option 1.3</option>
+                    </optgroup>
+                    <optgroup label="Group 2" class="group-2">
+                        <option value="2-1">Option 2.1</option>
+                        <option value="2-2">Option 2.2</option>
+                        <option value="2-3">Option 2.3</option>
+                    </optgroup>
+                    <optgroup label="Group 3" class="group-3">
+                        <option value="2-1">Option 3.1</option>
+                        <option value="2-2">Option 3.2</option>
+                        <option value="2-3">Option 3.3</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class='col-md-6'>
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i>Select All & On Change Triggers
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="javascript:;" class="reload"> </a>
+                    <a href="javascript:;" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <h4>Select All Option</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-select-all="true" data-width="100%" data-filter="true" data-action-onchange="true">
+                    <option value="1">Option 1</option>
+                    <option value="2" selected="selected">Option 2</option>
+                    <!-- Option 3 will be selected in advance ... -->
+                    <option value="3" selected="selected">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
+                <h4>Dropdown with On Change Options</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-action-onchange="true">
+                    <option value="1">Option 1</option>
+                    <option value="2" selected="selected">Option 2</option>
+                    <!-- Option 3 will be selected in advance ... -->
+                    <option value="3" selected="selected">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
+                <h4>Dropdown with On Dropdown Show</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-action-dropdownshow="true">
+                    <option value="1">Option 1</option>
+                    <option value="2" selected="selected">Option 2</option>
+                    <!-- Option 3 will be selected in advance ... -->
+                    <option value="3" selected="selected">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
+                <h4>Dropdown with On Dropdown Hide</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-action-dropdownhide="true">
+                    <option value="1">Option 1</option>
+                    <option value="2" selected="selected">Option 2</option>
+                    <!-- Option 3 will be selected in advance ... -->
+                    <option value="3" selected="selected">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class='col-md-3'>
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-red-sunglo">
+                    <i class="fa fa-gift font-red-sunglo"></i>
+                    <span class="caption-subject bold uppercase">Custom Color</span>
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="javascript:;" class="reload"> </a>
+                    <a href="javascript:;" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <h4>Default Color</h4>
+                <select class="mt-multiselect btn btn-default" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Blue Color</h4>
+                <select class="mt-multiselect btn btn-info" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Red Color</h4>
+                <select class="mt-multiselect btn red" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Green Color</h4>
+                <select class="mt-multiselect btn btn-success" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Yellow Color</h4>
+                <select class="mt-multiselect btn btn-warning" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Purple Color</h4>
+                <select class="mt-multiselect btn purple" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class='col-md-3'>
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-red-sunglo">
+                    <i class="fa fa-gift font-red-sunglo"></i>
+                    <span class="caption-subject bold uppercase">Outline Square</span>
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="javascript:;" class="reload"> </a>
+                    <a href="javascript:;" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <h4>Default Color</h4>
+                <select class="mt-multiselect btn btn-default btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Blue Color</h4>
+                <select class="mt-multiselect btn blue btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Red Color</h4>
+                <select class="mt-multiselect btn red btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Green Color</h4>
+                <select class="mt-multiselect btn green btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Yellow Color</h4>
+                <select class="mt-multiselect btn yellow-lemon btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Purple Color</h4>
+                <select class="mt-multiselect btn purple btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class='col-md-3'>
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-blue">
+                    <i class="fa fa-gift font-blue"></i>
+                    <span class="caption-subject bold uppercase">Rounded</span>
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="javascript:;" class="reload"> </a>
+                    <a href="javascript:;" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <h4>Default Color</h4>
+                <select class="mt-multiselect btn btn-default btn-circle" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Blue Color</h4>
+                <select class="mt-multiselect btn btn-info btn-circle" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Red Color</h4>
+                <select class="mt-multiselect btn red btn-circle" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Green Color</h4>
+                <select class="mt-multiselect btn btn-success btn-circle" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Yellow Color</h4>
+                <select class="mt-multiselect btn btn-warning btn-circle" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Purple Color</h4>
+                <select class="mt-multiselect btn purple btn-circle" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class='col-md-3'>
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-blue">
+                    <i class="fa fa-gift font-blue"></i>
+                    <span class="caption-subject bold uppercase">Outline Rounded</span>
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="javascript:;" class="reload"> </a>
+                    <a href="javascript:;" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <h4>Default Color</h4>
+                <select class="mt-multiselect btn btn-default btn-circle btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Blue Color</h4>
+                <select class="mt-multiselect btn blue btn-circle btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Red Color</h4>
+                <select class="mt-multiselect btn red btn-circle btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Green Color</h4>
+                <select class="mt-multiselect btn green btn-circle btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Yellow Color</h4>
+                <select class="mt-multiselect btn yellow-lemon btn-circle btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+                <h4>Purple Color</h4>
+                <select class="mt-multiselect btn purple btn-circle btn-outline" multiple="multiple" data-width="100%">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PAGE BASE CONTENT -->
+
+@section scripts{
+    <script src="~/global/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js" type="text/javascript"></script>
+    <script src="~/pages/scripts/components-bootstrap-multiselect.min.js" type="text/javascript"></script>
+}
