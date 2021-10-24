@@ -28,5 +28,17 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+        public IActionResult AjaxContent1()
+        {
+            return PartialView();
+        }
+        public IActionResult AjaxContent2()
+        {
+            return PartialView();
+        }
+        public IActionResult AjaxContent3()
+        {
+            return PartialView();
+        }
     }
 }
