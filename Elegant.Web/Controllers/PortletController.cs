@@ -12,5 +12,21 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+        public IActionResult Light()
+        {
+            return View();
+        }
+        public IActionResult Solid()
+        {
+            return View();
+        }
+        public IActionResult Ajax()
+        {
+            return View();
+        }
+        public IActionResult Draggable()
+        {
+            return View();
+        }
     }
 }
