@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewData["Title"] = "HighStock";
+}
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            HighStock
+            <small>Lorem ipsum</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="index.html">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="#">Charts</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">HighCharts</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<div class="m-heading-1 border-green m-bordered">
+    <p> Good-looking charts shouldn't be difficult! </p>
+    <p>
+        Please note, Metronic includes Highcharts plugin for demo only. For more info please check out
+        <a href="http://www.highcharts.com/" class="btn green btn-outline" target="_blank">the official documentation</a> and
+        <a href="http://www.highcharts.com/products/highcharts/#non-commercial" class="btn red btn-outline" target="_blank">the license notice</a>
+    </p>
+</div>
+<!-- BEGIN : HIGHSTOCK -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">Compare Multiple Series</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="highstock_1" style="height:500px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">Candlestick Chart</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="highstock_2" style="height:500px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">OHLC Chart</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="highstock_3" style="height:500px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">Line Chart with Flags</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="highstock_4" style="height:500px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END : HIGHSTOCK -->
+<!-- END PAGE BASE CONTENT -->
+@section scripts{
+    <script src="~/global/plugins/highstock/js/highstock.js" type="text/javascript"></script>
+    <script src="~/pages/scripts/charts-highstock.min.js" type="text/javascript"></script>
+
+}
