@@ -1,0 +1,181 @@
+﻿
+@{
+    ViewData["Title"] = "Vector Maps";
+}
+@section links{
+    <link href="~/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
+}
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            Vector Maps
+            <small>interactive vector map samples</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="index.html">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">Maps</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<div class="m-heading-1 border-red m-bordered">
+    <h3>JQVMap</h3>
+    <p> JQVMap is a jQuery plugin that renders Vector Maps. It uses resizable Scalable Vector Graphics (SVG) for modern browsers like Firefox, Safari, Chrome, Opera and Internet Explorer 9. </p>
+    <p>
+        For more info please check out
+        <a href="http://jqvmap.com/" class="btn red btn-outline" target="_blank">the official documentation</a>.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <!-- BEGIN WORLD PORTLET-->
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">World</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="vmap_world" class="vmaps"> </div>
+            </div>
+        </div>
+        <!-- END WORLD PORTLET-->
+    </div>
+    <div class="col-md-6">
+        <!-- BEGIN USA PORTLET-->
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-purple"></i>
+                    <span class="caption-subject font-purple bold uppercase">USA</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="vmap_usa" class="vmaps "> </div>
+            </div>
+        </div>
+        <!-- END USA PORTLET-->
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <!-- BEGIN EUROPE PORTLET-->
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-red"></i>
+                    <span class="caption-subject font-red bold uppercase">Europe</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="vmap_europe" class="vmaps"> </div>
+            </div>
+        </div>
+        <!-- END EUROPE PORTLET-->
+    </div>
+    <div class="col-md-6">
+        <!-- BEGIN RUSSIA PORTLET-->
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">Russia</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="vmap_russia" class="vmaps "> </div>
+            </div>
+        </div>
+        <!-- END RUSSIA PORTLET-->
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <!-- BEGIN GERMANY PORTLET-->
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-blue"></i>
+                    <span class="caption-subject font-blue bold uppercase">Germany</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="vmap_germany" class="vmaps"> </div>
+            </div>
+        </div>
+        <!-- END GERMANY PORTLET-->
+    </div>
+</div>
+<!-- END PAGE BASE CONTENT -->
+
+@section scripts{
+    <partial name="_VmapScriptsPartial" />
+    <script src="~/pages/scripts/maps-vector.min.js" type="text/javascript"></script>
+}
