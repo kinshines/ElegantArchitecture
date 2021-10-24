@@ -52,5 +52,17 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+        public IActionResult ImageCrop()
+        {
+            return View();
+        }
+        public IActionResult FileUpload()
+        {
+            return View();
+        }
+        public IActionResult Dropzone()
+        {
+            return View();
+        }
     }
 }
