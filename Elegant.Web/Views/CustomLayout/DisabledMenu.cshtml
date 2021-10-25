@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Disabled Menu";
+}
+
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            Disabled Menu
+            <small>disabled menu links</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="index.html">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">Custom Layouts</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<div class="note note-info">
+    <h4 class="block">Disabled Links</h4>
+    <p> Just apply <code>.disabled-link</code> class to a parent element and <code>.disable-target</code> class to parent itself or child target elements. See the sidebar and horizontal menu disabled links. </p>
+</div>
+<!-- END PAGE BASE CONTENT -->
+
+@section scripts{
+    <script>
+        $(function () {
+            $.get('/CustomLayout/DisabledLink', function (html) {
+                var menu = $('ul.page-sidebar-menu');
+                menu.prepend(html);
+            });
+        })
+    </script>
+}
