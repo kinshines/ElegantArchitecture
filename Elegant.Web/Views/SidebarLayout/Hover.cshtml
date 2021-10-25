@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Hover Sidebar Menu";
+}
+
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            Hover Sidebar Menu
+            <small>hover sidebar menu option</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="index.html">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">Sidebar Layouts</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<div class="note note-info">
+    <p> Sidebar menu layout with hoverable dropdown menus. </p>
+</div>
+<!-- END PAGE BASE CONTENT -->
+
+@section scripts{
+    <script>
+        $(function () {
+            $('ul.page-sidebar-menu').addClass('page-sidebar-menu-hover-submenu');
+        })
+    </script>
+}
