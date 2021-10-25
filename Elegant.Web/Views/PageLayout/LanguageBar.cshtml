@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Header Language Bar";
+}
+
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            Header Language Bar
+            <small>language bar in header</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="index.html">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">Page Layouts</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<div class="note note-info">
+    <p> Header language bar for language selection. </p>
+</div>
+<!-- END PAGE BASE CONTENT -->
+
+@section scripts{
+    <script>
+        $(function () {
+            $.get('/PageLayout/LanguageOption', function (html) {
+                var toggler = $('li.quick-sidebar-toggler');
+                $(html).insertBefore(toggler);
+            });
+        })
+    </script>
+}
