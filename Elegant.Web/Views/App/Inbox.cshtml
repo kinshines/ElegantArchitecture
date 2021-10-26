@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewData["Title"] = "Inbox";
+}
+
+@section links{
+    <link href="~/global/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link href="~/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" rel="stylesheet" type="text/css" />
+    <link href="~/global/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/global/plugins/jquery-file-upload/css/jquery.fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="~/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet" type="text/css" />
+    <link href="~/apps/css/inbox.min.css" rel="stylesheet" type="text/css" />
+
+}
+
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            Inbox
+            <small>user inbox</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="index.html">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">Apps</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<div class="inbox">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="inbox-sidebar">
+                <a href="javascript:;" data-title="Compose" class="btn red compose-btn btn-block">
+                    <i class="fa fa-edit"></i> Compose
+                </a>
+                <ul class="inbox-nav">
+                    <li class="active">
+                        <a href="javascript:;" data-type="inbox" data-title="Inbox">
+                            Inbox
+                            <span class="badge badge-success">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-type="important" data-title="Inbox"> Important </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-type="sent" data-title="Sent"> Sent </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-type="draft" data-title="Draft">
+                            Draft
+                            <span class="badge badge-danger">8</span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="javascript:;" class="sbold uppercase" data-title="Trash">
+                            Trash
+                            <span class="badge badge-info">23</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-type="inbox" data-title="Promotions">
+                            Promotions
+                            <span class="badge badge-warning">2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-type="inbox" data-title="News"> News </a>
+                    </li>
+                </ul>
+                <ul class="inbox-contacts">
+                    <li class="divider margin-bottom-30"></li>
+                    <li>
+                        <a href="javascript:;">
+                            <img class="contact-pic" src="~/pages/media/users/avatar4.jpg">
+                            <span class="contact-name">Adam Stone</span>
+                            <span class="contact-status bg-green"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img class="contact-pic" src="~/pages/media/users/avatar2.jpg">
+                            <span class="contact-name">Lisa Wong</span>
+                            <span class="contact-status bg-red"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img class="contact-pic" src="~/pages/media/users/avatar5.jpg">
+                            <span class="contact-name">Nick Strong</span>
+                            <span class="contact-status bg-green"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img class="contact-pic" src="~/pages/media/users/avatar6.jpg">
+                            <span class="contact-name">Anna Bold</span>
+                            <span class="contact-status bg-yellow"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img class="contact-pic" src="~/pages/media/users/avatar7.jpg">
+                            <span class="contact-name">Richard Nilson</span>
+                            <span class="contact-status bg-green"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="inbox-body">
+                <div class="inbox-header">
+                    <h1 class="pull-left">Inbox</h1>
+                    <form class="form-inline pull-right" action="index.html">
+                        <div class="input-group input-medium">
+                            <input type="text" class="form-control" placeholder="Password">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn green">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="inbox-content"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PAGE BASE CONTENT -->
+
+@section scripts{
+    <script src="~/global/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="~/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>
+    <script src="~/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/vendor/tmpl.min.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/vendor/load-image.min.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/vendor/canvas-to-blob.min.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/jquery.iframe-transport.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/jquery.fileupload.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/jquery.fileupload-process.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/jquery.fileupload-image.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/jquery.fileupload-audio.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/jquery.fileupload-video.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/jquery.fileupload-validate.js" type="text/javascript"></script>
+    <script src="~/global/plugins/jquery-file-upload/js/jquery.fileupload-ui.js" type="text/javascript"></script>
+    <script src="~/apps/scripts/inbox.min.js" type="text/javascript"></script>
+
+}
