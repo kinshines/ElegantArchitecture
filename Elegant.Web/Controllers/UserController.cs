@@ -24,5 +24,37 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+        public IActionResult Login1()
+        {
+            return View();
+        }
+        public IActionResult Login2()
+        {
+            return View();
+        }
+        public IActionResult Login3()
+        {
+            return View();
+        }
+        public IActionResult Login4()
+        {
+            return View();
+        }
+        public IActionResult Login5()
+        {
+            return View();
+        }
+        public IActionResult Login6()
+        {
+            return View();
+        }
+        public IActionResult Lock1()
+        {
+            return View();
+        }
+        public IActionResult Lock2()
+        {
+            return View();
+        }
     }
 }
