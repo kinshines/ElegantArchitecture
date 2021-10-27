@@ -12,5 +12,17 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+        public IActionResult Account()
+        {
+            return View();
+        }
+        public IActionResult Help()
+        {
+            return View();
+        }
+        public IActionResult Profile2()
+        {
+            return View();
+        }
     }
 }
