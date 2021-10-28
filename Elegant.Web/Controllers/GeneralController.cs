@@ -28,6 +28,14 @@ namespace Elegant.Web.Controllers
         {
             return PartialView();
         }
+        public IActionResult LoadMore3()
+        {
+            return PartialView();
+        }
+        public IActionResult LoadMore4()
+        {
+            return PartialView();
+        }
         public IActionResult Portfolio2()
         {
             return View();
@@ -39,6 +47,22 @@ namespace Elegant.Web.Controllers
         public IActionResult Portfolio4()
         {
             return View();
+        }
+        public IActionResult AjaxProject1()
+        {
+            return PartialView();
+        }
+        public IActionResult AjaxProject2()
+        {
+            return PartialView();
+        }
+        public IActionResult AjaxProject3()
+        {
+            return PartialView();
+        }
+        public IActionResult AjaxProject4()
+        {
+            return PartialView();
         }
         public IActionResult Search()
         {
