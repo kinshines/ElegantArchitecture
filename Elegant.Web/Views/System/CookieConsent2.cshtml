@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Cookie Consent 2";
+}
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            Cookie Consent 2
+            <small>Cookie Consent Demo</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="index.html">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">System</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<div class="note note-success">
+    <h3>Cookie Consent Bar</h3>
+    <p>
+        A simple, lightweight jQuery plugin for creating a notification bar that is dismissable and dismiss is saved by cookie. Perfect for implementing the new eu cookielaw. For more info check
+        <a class="btn red btn-outline" href="https://github.com/carlwoodhouse/jquery.cookieBar"
+           target="_blank">the official documentation</a>
+    </p>
+</div>
+<div class="mt-cookie-consent-bar mt-cookie-consent-bar-light">
+    <div class="mt-cookie-consent-bar-holder">
+        <div class="mt-cookie-consent-bar-content">
+            This website uses cookies to ensure you get the best experience on our website.
+            <a href="http://www.allaboutcookies.org/cookies/" tatget="_blank">What is cookie ?</a>
+            <a href="#">Our Cookie Policy</a>
+        </div>
+        <div class="mt-cookie-consent-bar-action">
+            <a href="javascript:;" class="mt-cookie-consent-btn btn btn-circle red">Understand</a>
+        </div>
+    </div>
+</div>
+<!-- END PAGE BASE CONTENT -->
+@section scripts{
+    <script src="~/global/plugins/jquery-cookiebar/jquery.cookieBar.min.js" type="text/javascript"></script>
+    <script src="~/layouts/global/scripts/cookie-consent.min.js" type="text/javascript"></script>
+
+}
