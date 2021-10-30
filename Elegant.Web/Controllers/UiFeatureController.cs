@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Elegant.Core.Dtos;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -81,6 +82,12 @@ namespace Elegant.Web.Controllers
         public IActionResult Tree()
         {
             return View();
+        }
+
+        public IActionResult TreeAjaxData()
+        {
+            var list = new List<TreeNodeDto>();
+            return Json(list);
         }
 
         public IActionResult Progress1()
