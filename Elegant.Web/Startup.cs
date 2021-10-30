@@ -10,6 +10,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Elegant.Infrastructure.Data;
 using Elegant.Infrastructure.Services;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Mvc.Controllers;
+using NAutowired;
+using NAutowired.Core.Extensions;
 
 namespace Elegant.Web
 {
@@ -27,9 +31,12 @@ namespace Elegant.Web
         {
             services.AddDbContext<ElegantContext>(options =>
                 options.UseInMemoryDatabase("Elegant"));
-            //todo add auto service
-            services.AddScoped<DashboardService>();
-            services.AddControllersWithViews();
+            //register controllers as services
+            services.AddControllersWithViews().AddControllersAsServices();
+            //replace `IControllerActivator` implement.
+            services.Replace(ServiceDescriptor.Transient<IControllerActivator, NAutowiredControllerActivator>());
+            //Use automatic register injection.
+            services.AutoRegisterDependency(new List<string> { "Elegant.Infrastructure" });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

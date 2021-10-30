@@ -2,6 +2,7 @@
 using Elegant.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NAutowired.Core.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,27 +13,25 @@ namespace Elegant.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        DashboardService _dashboardService;
-        public HomeController(ILogger<HomeController> logger, DashboardService dashboardService)
-        {
-            _logger = logger;
-            _dashboardService = dashboardService;
-        }
+        [Autowired]
+        readonly ILogger<HomeController> logger;
+        [Autowired]
+        DashboardService dashboardService;
 
         public IActionResult Index()
         {
-            var model = _dashboardService.GetSummary();
+            var model = dashboardService.GetSummary();
+            logger.LogInformation("get summary");
             return View(model);
         }
         public IActionResult Dashboard2()
         {
-            var model = _dashboardService.GetSummary();
+            var model = dashboardService.GetSummary();
             return View(model);
         }
         public IActionResult Dashboard3()
         {
-            var model = _dashboardService.GetSummary();
+            var model = dashboardService.GetSummary();
             return View(model);
         }
 
