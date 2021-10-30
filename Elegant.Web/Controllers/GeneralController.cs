@@ -88,6 +88,10 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+        public IActionResult Pricing2()
+        {
+            return View();
+        }
         public IActionResult Faq()
         {
             return View();
