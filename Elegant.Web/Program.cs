@@ -42,6 +42,8 @@ namespace Elegant.Web
                     logging.ClearProviders();
                     logging.SetMinimumLevel(LogLevel.Trace);
                 })
+                .UseDefaultServiceProvider(options =>
+                    options.ValidateScopes = false)
                 .UseNLog();
     }
 }

@@ -25,9 +25,8 @@ namespace Elegant.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ElegantContext>();
-            //services.AddDbContext<ElegantContext>(options =>
-            //    options.UseInMemoryDatabase("Elegant"));
+            services.AddDbContext<ElegantContext>(options =>
+                options.UseInMemoryDatabase("Elegant"));
             //todo add auto service
             services.AddScoped<DashboardService>();
             services.AddControllersWithViews();
@@ -44,6 +43,8 @@ namespace Elegant.Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseStatusCodePages();
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -56,6 +57,8 @@ namespace Elegant.Web
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            SeedData.EnsurePopulated(app.ApplicationServices);
         }
     }
 }
