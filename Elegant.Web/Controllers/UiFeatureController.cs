@@ -1,5 +1,7 @@
 ﻿using Elegant.Core.Dtos;
+using Elegant.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
+using NAutowired.Core.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,8 @@ namespace Elegant.Web.Controllers
 {
     public class UiFeatureController : Controller
     {
+        [Autowired]
+        TreeService treeService;
         public IActionResult MetronicGrid()
         {
             return View();
@@ -84,9 +88,9 @@ namespace Elegant.Web.Controllers
             return View();
         }
 
-        public IActionResult TreeAjaxData()
+        public IActionResult TreeAjaxData(string parent)
         {
-            var list = new List<TreeNodeDto>();
+            var list = treeService.AjaxData(parent);
             return Json(list);
         }
 
