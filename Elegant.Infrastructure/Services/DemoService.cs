@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 namespace Elegant.Infrastructure.Services
 {
     [Service]
-    public class TreeService
+    public class DemoService
     {
-        public List<TreeNodeDto> AjaxData(string parent)
+        public List<TreeNodeDto> AjaxTreeData(string parent)
         {
             var rand = new Random();
             var list = new List<TreeNodeDto>();
@@ -32,5 +32,23 @@ namespace Elegant.Infrastructure.Services
             return list;
         }
         
+        public List<TypeaheadDto> AjaxHeadData(string query)
+        {
+            var rand = new Random();
+            var list = new List<TypeaheadDto>();
+            for(int i = 0; i < 6; i++)
+            {
+                var sub = rand.Next(10, 100);
+                var dto = new TypeaheadDto()
+                {
+                    Desc = "some description goes here...",
+                    Img = "http://lorempixel.com/50/50/?" + DateTime.Now.Ticks,
+                    Tokens = new List<string> { query, query + sub },
+                    Value = query + " - " + sub
+                };
+                list.Add(dto);
+            }
+            return list;
+        }
     }
 }

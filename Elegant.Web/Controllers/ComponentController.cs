@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Elegant.Infrastructure.Services;
+using Microsoft.AspNetCore.Mvc;
+using NAutowired.Core.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +10,8 @@ namespace Elegant.Web.Controllers
 {
     public class ComponentController : Controller
     {
+        [Autowired]
+        DemoService demoService;
         public IActionResult DateTimePicker()
         {
             return View();
@@ -45,6 +49,11 @@ namespace Elegant.Web.Controllers
         public IActionResult Typeahead()
         {
             return View();
+        }
+        public IActionResult TypeaheadCustom(string query)
+        {
+            var list = demoService.AjaxHeadData(query);
+            return Json(list);
         }
 
         public IActionResult Tag()

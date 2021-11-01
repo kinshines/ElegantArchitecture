@@ -12,7 +12,7 @@ namespace Elegant.Web.Controllers
     public class UiFeatureController : Controller
     {
         [Autowired]
-        TreeService treeService;
+        DemoService demoService;
         public IActionResult MetronicGrid()
         {
             return View();
@@ -90,7 +90,7 @@ namespace Elegant.Web.Controllers
 
         public IActionResult TreeAjaxData(string parent)
         {
-            var list = treeService.AjaxData(parent);
+            var list = demoService.AjaxTreeData(parent);
             return Json(list);
         }
 
@@ -135,9 +135,19 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult TimeoutKeepAlive()
+        {
+            return Ok();
+        }
         public IActionResult IdleTimeout()
         {
             return View();
+        }
+
+        public IActionResult IdleTimeoutKeepAlive()
+        {
+            return Ok("OK");
         }
 
         public IActionResult Modal()
@@ -148,6 +158,10 @@ namespace Elegant.Web.Controllers
         public IActionResult ExtendModal()
         {
             return View();
+        }
+        public IActionResult AjaxModal()
+        {
+            return PartialView();
         }
         public IActionResult Tile()
         {
