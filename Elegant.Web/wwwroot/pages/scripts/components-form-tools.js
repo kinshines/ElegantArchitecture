@@ -91,7 +91,7 @@ var ComponentsFormTools = function () {
             attr("disabled", true).
             addClass("spinner");
 
-            $.post('../demo/username_checker.php', {
+            $.post('/UiFeature/NameChecker', {
                 username: input.val()
             }, function (res) {
                 btn.attr('disabled', false);
@@ -147,7 +147,7 @@ var ComponentsFormTools = function () {
             attr("disabled", true).
             addClass("spinner");
 
-            $.post('../demo/username_checker.php', {
+            $.post('/UiFeature/NameChecker', {
                 username: input.val()
             }, function (res) {
                 input.attr("readonly", false).

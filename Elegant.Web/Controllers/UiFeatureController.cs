@@ -176,5 +176,12 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult NameChecker(string username)
+        {
+            var result = new { Status = "ERROR", Message = $"Username <b>{username}</b> is not available. Please choose another one." };
+            return Json(result);
+        }
     }
 }
