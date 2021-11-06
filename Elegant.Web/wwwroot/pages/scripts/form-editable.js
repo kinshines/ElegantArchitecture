@@ -541,9 +541,9 @@ var FormEditable = function() {
             // init 
             $('#inline').on('change', function(e) {
                 if ($(this).is(':checked')) {
-                    window.location.href = 'form_editable.html?mode=inline';
+                    window.location.href = '/Form/Xeditable?mode=inline';
                 } else {
-                    window.location.href = 'form_editable.html';
+                    window.location.href = '/Form/Xeditable';
                 }
             });
 
