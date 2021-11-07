@@ -56,6 +56,12 @@ namespace Elegant.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult CropDemo(int x,int y,int w,int h)
+        {
+            //todo crop image as response
+            return Ok();
+        }
         public IActionResult FileUpload()
         {
             return View();

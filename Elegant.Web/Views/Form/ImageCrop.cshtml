@@ -299,7 +299,7 @@
                                         <i>Crop Image</i> button, the form will be submitted and a 150x150 thumbnail will be dumped to the browser. Try it!
                                     </p>
                                     <!-- This is the form that our event handler fills -->
-                                    <form action="~/global/plugins/jcrop/crop-demo.php" target="_blank" method="post" id="demo8_form">
+                                    <form asp-action="CropDemo" target="_blank" method="post" id="demo8_form">
                                         <input type="hidden" id="crop_x" name="x" />
                                         <input type="hidden" id="crop_y" name="y" />
                                         <input type="hidden" id="crop_w" name="w" />
@@ -319,6 +319,5 @@
 @section scripts{
     <script src="~/global/plugins/jcrop/js/jquery.color.js" type="text/javascript"></script>
     <script src="~/global/plugins/jcrop/js/jquery.Jcrop.min.js" type="text/javascript"></script>
-    <script src="~/pages/scripts/form-image-crop.min.js" type="text/javascript"></script>
-
+    <script src="~/pages/scripts/form-image-crop.js"></script>
 }
