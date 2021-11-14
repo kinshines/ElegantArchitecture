@@ -228,7 +228,7 @@ var TableDatatablesButtons = function () {
                 ],
                 "pageLength": 10, // default record count per page
                 "ajax": {
-                    "url": "../demo/table_ajax.php", // ajax source
+                    "url": "/Table/AjaxData", // ajax source
                 },
                 "order": [
                     [1, "asc"]
